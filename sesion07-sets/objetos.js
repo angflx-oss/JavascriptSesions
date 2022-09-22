@@ -1,22 +1,34 @@
-//objects
-
-const obj = {
-    id: 4,
-    nombre: "Juan",
-    apellido: "Gonzalez",
-    isDeveloper: true,
-    libros_favoritos: ["El método", "El código de la manifestación"],
+const datos = {
+    nombre: "Angela",
+    apellido: "Felix",
+    edad: 23,
+    altura:"160",
+    isDeveloper : true,
 }
 
-//al copiar objetos se copia tambien la referencia a memoria se deben copiar mediante factor de propagación para no modificar el objeto original
+const edad = datos.edad;
 
-const obj2 = obj;
+const datos2 = [
+    {
+        ...datos
+    },
+    {
+        nombre: "Yareth",
+        apellido: "Espinoza",
+        edad: 23,
+        altura:"160",
+        isDeveloper : false,
+    },
+    {
+        nombre: "Eduardo",
+        apellido: "Romero",
+        edad: 22,
+        altura:"180",
+        isDeveloper : false,    
+    }
+    
+]
 
-const obj3 = {...obj};
+const listaOrdenada = datos2.sort((a,b) => b.edad - a.edad);
 
-obj3.nombre = "Gorka"
-
-console.log(obj.nombre);
-console.log(obj3.nombre);
-
-//ordenar listas de objetos en funcion de una variable
+console.log(listaOrdenada);
