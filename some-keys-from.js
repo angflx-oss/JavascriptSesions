@@ -1,4 +1,4 @@
-//.some() si algunos metodos de la lista cumplen la condición
+//.some() si algunos elementos de la lista cumplen la condición
 
 const array = [3,7,2,4,7,9,42,35,7865,23,-1]
 
